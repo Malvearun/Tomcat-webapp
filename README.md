@@ -80,8 +80,6 @@ Alternatively, if you would like to allow access only to connections coming from
 
 your own IP address, you can add your public IP address to the list:
 
-
-
 `<Context antiResourceLocking="false" privileged="true" >
 
 <!--<Valve className="org.apache.catalina.valves.RemoteAddrValve"
@@ -95,6 +93,17 @@ allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />-->
 run `vi conf/tomcat-users.xml`
 
 `<role rolename="admin-gui"/> <user username="admin" password="password" roles="manager-gui,manager-status,admin-gui"/>`
+
+•	To restart the tomcat service follow below two commands:
+run ` ./shutdown.sh`
+run `./startup.sh`
+run `ps -ef | grep tomcat`
+
+•	 From AWS console, copy the public DNS ip address and paste in browser `ec2-35-174-209-223.compute-1.amazonaws.com:8080`
+
+•	 Click on `Manager app` and login to Tomcat Web Application Manager with user name and password has mentiond above.
+
+
 
 
 
